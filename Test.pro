@@ -28,17 +28,20 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     memberinfo.cpp \
-    password.cpp
+    password.cpp \
+    addpackage.cpp
 
 HEADERS += \
         mainwindow.h \
     password.h \
-    memberinfo.h
+    memberinfo.h \
+    addpackage.h
 
 FORMS += \
         mainwindow.ui \
     memberinfo.ui \
-    password.ui
+    password.ui \
+    addpackage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
