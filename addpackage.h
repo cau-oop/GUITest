@@ -15,6 +15,11 @@ public:
     explicit addPackage(QWidget *parent = nullptr);
     ~addPackage();
 
+private slots:
+    void on_pushButton_clicked();
+
+    void on_comboBox_currentIndexChanged(int index);
+
 private:
     Ui::addPackage *ui;
 };
