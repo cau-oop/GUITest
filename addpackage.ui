@@ -26,7 +26,7 @@
     <string>Package 추가</string>
    </property>
   </widget>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QWidget" name="packagename" native="true">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -38,7 +38,7 @@
      <height>41</height>
     </rect>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -49,10 +49,10 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="name_line"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="name_button">
        <property name="text">
         <string>확인</string>
        </property>
@@ -61,7 +61,7 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QWidget" name="widget_2" native="true">
+  <widget class="QWidget" name="location" native="true">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -70,7 +70,7 @@
      <height>41</height>
     </rect>
    </property>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="loc_combo">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -80,7 +80,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="loc_button">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -94,7 +94,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="widget_3" native="true">
+  <widget class="QWidget" name="tag" native="true">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -117,11 +117,11 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QLineEdit" name="lineEdit_4"/>
+      <widget class="QLineEdit" name="tag_line"/>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_16">
+   <widget class="QPushButton" name="tag_button_2">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -135,7 +135,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="widget_4" native="true">
+  <widget class="QWidget" name="price" native="true">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -158,10 +158,10 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QLineEdit" name="lineEdit_5"/>
+      <widget class="QLineEdit" name="price_line"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_17">
+      <widget class="QPushButton" name="price_button_2">
        <property name="text">
         <string>확인</string>
        </property>
@@ -170,7 +170,7 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QWidget" name="widget_5" native="true">
+  <widget class="QWidget" name="via" native="true">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -179,7 +179,7 @@
      <height>41</height>
     </rect>
    </property>
-   <widget class="QPushButton" name="pushButton_18">
+   <widget class="QPushButton" name="via_button_2">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -192,7 +192,7 @@
      <string>확인</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="via_combox">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -204,12 +204,15 @@
     <property name="currentText">
      <string/>
     </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
     <property name="maxVisibleItems">
      <number>2</number>
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="widget_6" native="true">
+  <widget class="QWidget" name="trav_start_date" native="true">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -238,18 +241,21 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="date_button">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>150</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QWidget" name="widget_7" native="true">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>500</y>
-     <width>120</width>
-     <height>51</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -260,87 +266,87 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QLabel" name="label_9">
+     <widget class="QLabel" name="PID">
       <property name="text">
        <string>PID :</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLCDNumber" name="lcdNumber"/>
+     <widget class="QLCDNumber" name="PID_LCD"/>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_13">
+     <widget class="QPushButton" name="pname_button">
       <property name="text">
        <string>패키지 이름</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_12">
+     <widget class="QPushButton" name="location_button">
       <property name="text">
        <string>지역</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="tag_button">
       <property name="text">
        <string>태그</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="price_button">
       <property name="text">
        <string>가격(원화)</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="via_button">
       <property name="text">
        <string>경유</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="trav_date_button">
       <property name="text">
        <string>여행 출발일</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="trav_hour_button">
       <property name="text">
        <string>여행 출발 시간</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="how_long_button_2">
       <property name="text">
        <string>여행기간</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_9">
+     <widget class="QPushButton" name="trav_free_button">
       <property name="text">
        <string>자유여행</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_10">
+     <widget class="QPushButton" name="minppl_button">
       <property name="text">
        <string>최소인원</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_11">
+     <widget class="QPushButton" name="maxppl_button">
       <property name="text">
        <string>최대인원</string>
       </property>
@@ -348,13 +354,184 @@
     </item>
    </layout>
   </widget>
+  <widget class="QWidget" name="trav_start_hour" native="true">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>490</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QTimeEdit" name="timeEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>118</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="start_button">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="free_trav" native="true">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>540</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="trav_button">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="trav_combo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>72</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="maxVisibleItems">
+     <number>2</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="how_long_trav" native="true">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>540</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QLineEdit" name="how_long_line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="how_long_button">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="minppl" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>480</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QSpinBox" name="min_spin">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>46</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="min_button">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="maxppl" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>530</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QSpinBox" name="max_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>46</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="max_button">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_13</sender>
+   <sender>pname_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget</receiver>
+   <receiver>packagename</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -368,9 +545,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>name_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget</receiver>
+   <receiver>packagename</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -384,9 +561,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_12</sender>
+   <sender>location_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget_2</receiver>
+   <receiver>location</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -400,9 +577,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>loc_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget_2</receiver>
+   <receiver>location</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -416,9 +593,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_3</sender>
+   <sender>tag_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget_3</receiver>
+   <receiver>tag</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -432,9 +609,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_16</sender>
+   <sender>tag_button_2</sender>
    <signal>clicked()</signal>
-   <receiver>widget_3</receiver>
+   <receiver>tag</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -448,9 +625,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>price_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget_4</receiver>
+   <receiver>price</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -464,9 +641,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_17</sender>
+   <sender>price_button_2</sender>
    <signal>clicked()</signal>
-   <receiver>widget_4</receiver>
+   <receiver>price</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -480,9 +657,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_5</sender>
+   <sender>via_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget_5</receiver>
+   <receiver>via</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -496,9 +673,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_18</sender>
+   <sender>via_button_2</sender>
    <signal>clicked()</signal>
-   <receiver>widget_5</receiver>
+   <receiver>via</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -512,9 +689,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_6</sender>
+   <sender>trav_date_button</sender>
    <signal>clicked()</signal>
-   <receiver>widget_6</receiver>
+   <receiver>trav_start_date</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -556,6 +733,166 @@
     <hint type="destinationlabel">
      <x>436</x>
      <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trav_hour_button</sender>
+   <signal>clicked()</signal>
+   <receiver>trav_start_hour</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>start_button</sender>
+   <signal>clicked()</signal>
+   <receiver>trav_start_hour</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>450</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>528</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trav_free_button</sender>
+   <signal>clicked()</signal>
+   <receiver>free_trav</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>575</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trav_button</sender>
+   <signal>clicked()</signal>
+   <receiver>free_trav</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>565</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>578</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>how_long_button_2</sender>
+   <signal>clicked()</signal>
+   <receiver>how_long_trav</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>546</x>
+     <y>543</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>how_long_button</sender>
+   <signal>clicked()</signal>
+   <receiver>how_long_trav</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>586</x>
+     <y>563</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>573</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minppl_button</sender>
+   <signal>clicked()</signal>
+   <receiver>minppl</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>min_button</sender>
+   <signal>clicked()</signal>
+   <receiver>minppl</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>58</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>maxppl_button</sender>
+   <signal>clicked()</signal>
+   <receiver>maxppl</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>438</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>max_button</sender>
+   <signal>clicked()</signal>
+   <receiver>maxppl</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>552</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>563</y>
     </hint>
    </hints>
   </connection>
