@@ -1,27 +1,23 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QPixmap>
+#include "memberinfo.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);    
-    QPixmap pix("C:/Image/opening.jpg");
-    ui->label_pic->setPixmap(pix.scaled(640,640, Qt::KeepAspectRatio));
-
+    ui->setupUi(this);
 }
-
-void MainWindow::on_pushButton_clicked()
-{
-
-}
-
-
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+void MainWindow::on_pushButton_clicked()
+{
+    memberInfo memb;
+    memb.setModal(true);
+    memb.exec();
 
+}

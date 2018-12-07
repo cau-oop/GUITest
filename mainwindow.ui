@@ -17,34 +17,16 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>390</y>
-      <width>80</width>
-      <height>20</height>
+      <x>210</x>
+      <y>80</y>
+      <width>151</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>START</string>
+     <string>회원정보수정</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_pic">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>591</width>
-      <height>331</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <zorder>label_pic</zorder>
-   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -68,22 +50,5 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>182</x>
-     <y>239</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>184</x>
-     <y>259</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
