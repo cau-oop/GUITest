@@ -17,14 +17,27 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>80</y>
-      <width>151</width>
+      <x>270</x>
+      <y>450</y>
+      <width>100</width>
       <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>회원정보수정</string>
+     <string>START</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_pic">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>20</y>
+      <width>591</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
