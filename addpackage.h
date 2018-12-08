@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QDebug>
+#include <iostream>
+#include <string>
 
 namespace Ui {
 class addPackage;
@@ -15,8 +17,8 @@ class addPackage : public QDialog
 public:
     explicit addPackage(QWidget *parent = nullptr);
     ~addPackage();
-    QString name, location, tag, via;
-    int price, vian;
+    QString name, location, tag;
+    int price, via, date, time, free, howlong, min, max;
 
 private slots:
     void on_pushButton_clicked();
@@ -36,6 +38,16 @@ private slots:
     void on_via_button_2_clicked();
 
     void on_date_button_clicked();
+
+    void on_start_button_clicked();
+
+    void on_trav_button_clicked();
+
+    void on_how_long_button_clicked();
+
+    void on_min_button_clicked();
+
+    void on_max_button_clicked();
 
 private:
     Ui::addPackage *ui;

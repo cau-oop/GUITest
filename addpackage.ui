@@ -230,6 +230,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QCalendarWidget" name="calendarWidget">
     <property name="geometry">
@@ -357,22 +360,12 @@
   <widget class="QWidget" name="trav_start_hour" native="true">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>320</x>
      <y>490</y>
      <width>241</width>
      <height>41</height>
     </rect>
    </property>
-   <widget class="QTimeEdit" name="timeEdit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>118</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="start_button">
     <property name="geometry">
      <rect>
@@ -384,6 +377,25 @@
     </property>
     <property name="text">
      <string>확인</string>
+    </property>
+   </widget>
+   <widget class="QTimeEdit" name="timeEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>118</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="showGroupSeparator" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="currentSection">
+     <enum>QDateTimeEdit::HourSection</enum>
+    </property>
+    <property name="displayFormat">
+     <string>h:mm</string>
     </property>
    </widget>
   </widget>
@@ -418,8 +430,14 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
     <property name="currentText">
      <string/>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
     </property>
     <property name="maxVisibleItems">
      <number>2</number>
@@ -893,6 +911,22 @@
     <hint type="destinationlabel">
      <x>96</x>
      <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_button</sender>
+   <signal>clicked()</signal>
+   <receiver>trav_start_date</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>455</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>586</x>
+     <y>416</y>
     </hint>
    </hints>
   </connection>
