@@ -276,7 +276,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QLCDNumber" name="PID_LCD"/>
+     <widget class="QLCDNumber" name="PID_LCD">
+      <property name="intValue" stdset="0">
+       <number>0</number>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pname_button">

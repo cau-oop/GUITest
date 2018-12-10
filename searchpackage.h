@@ -14,6 +14,16 @@ class searchpackage : public QDialog
 public:
     explicit searchpackage(QWidget *parent = nullptr);
     ~searchpackage();
+    QString comparedata[7];
+
+private slots:
+    void on_horizontalSlider_valueChanged(int value);
+
+    void on_pushButton_clicked();
+
+    void on_priceslider_valueChanged(int value);
+
+    void on_searchbut_clicked();
 
 private:
     Ui::searchpackage *ui;

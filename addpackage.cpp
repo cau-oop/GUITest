@@ -12,8 +12,8 @@ addPackage::addPackage(QWidget *parent) :
     ui->via_combox->addItem("No");
     ui->trav_combo->addItem("Yes");
     ui->trav_combo->addItem("No");
-    //ui->PID_LCD->intValue() =
-}
+    ui->PID_LCD->display(PID);
+ }
 
 addPackage::~addPackage()
 {
@@ -24,15 +24,14 @@ addPackage::~addPackage()
 
 void addPackage::on_name_button_clicked()
 {
-    name = ui->name_line->text();
+    Pname[PID] = ui->name_line->text();
     ui->name_button->setEnabled(false);
-    qDebug() << name;
 }
 
 void addPackage::on_loc_button_clicked()
 {
     ui->loc_button->setEnabled(false);
-    location = ui->loc_combo->currentText();
+    location[PID] = ui->loc_combo->currentText();
 }
 
 
@@ -40,18 +39,18 @@ void addPackage::on_loc_button_clicked()
 void addPackage::on_tag_button_2_clicked()
 {
     ui->tag_button_2->setEnabled(false);
-    tag = ui->tag_line->text();
+    tag[PID] = ui->tag_line->text();
 }
 
 void addPackage::on_price_button_2_clicked()
 {
     ui->price_button_2->setEnabled(false);
-    price = ui->price_line->text().toInt();
+    price[PID] = ui->price_line->text().toInt();
 }
 
 void addPackage::on_via_button_2_clicked()
 {
-    via = ui->via_combox->currentIndex();
+    via[PID] = ui->via_combox->currentIndex();
 }
 
 void addPackage::on_date_button_clicked()
@@ -60,7 +59,7 @@ void addPackage::on_date_button_clicked()
     QString ddate = (ui->dateEdit->date()).toString();
     QStringList ddate_tmp = ddate.split("-");
     QString ddate2 = ddate_tmp.join("");
-    date =ddate2.toInt();
+    trav_start_date[PID] =ddate2.toInt();
 }
 
 void addPackage::on_start_button_clicked()
@@ -69,26 +68,85 @@ void addPackage::on_start_button_clicked()
     QString ttime = (ui->timeEdit->time()).toString();
     QStringList time_tmp = ttime.split(":");
     QString timesave = time_tmp.join("");
-    time = timesave.toInt();
+    trav_start_hour[PID] = timesave.toInt();
 }
 
 void addPackage::on_trav_button_clicked()
 {
-    free = ui->trav_combo->currentIndex();
+    free_trav[PID] = ui->trav_combo->currentIndex();
 }
 
 
 void addPackage::on_how_long_button_clicked()
 {
-    howlong  = ui->how_long_line->text().toInt();
+    how_long_trav[PID]  = ui->how_long_line->text().toInt();
 }
 
 void addPackage::on_min_button_clicked()
 {
-    min =  ui->min_spin->value();
+    minppl[PID] =  ui->min_spin->value();
 }
 
 void addPackage::on_max_button_clicked()
 {
-    max = ui->max_spinbox->value();
+    maxppl[PID] = ui->max_spinbox->value();
 }
+
+void addPackage::ReadFile()
+{
+    QFile file("packagelist.txt");
+    file.open(QIODevice::ReadOnly);
+    QDataStream in(&file);
+    QTextStream OpenFile(&file);
+    QString ConfigText;
+    QString search;
+    QString tmp;
+while(!OpenFile.atEnd())
+{
+    tmp = QString::number(PID);
+    search = "PID >>" + tmp;
+    ConfigText=OpenFile.readLine();
+    if((ConfigText == search))
+    {
+        PID++;
+    }
+}
+
+}
+
+void addPackage::WriteFile()
+{
+    QFile file("packagelist.txt");
+    file.open(QIODevice::WriteOnly);
+    QTextStream os(&file);
+    os << "PID >>" << PID;
+    os << " || 패키지 >>" << Pname[PID];
+    os << " || 지역 >>" << location[PID];
+    os << " || 태그(띄어쓰기 없이) >>" << tag[PID];
+    os << " || 가격 >> " << price[PID];
+    os << " || 경유 >>" << via[PID];
+    os << " || 출발일 >>" << trav_start_date[PID];
+    os << " || 출발시간 >>" << trav_start_hour[PID];
+    os << " || 여행기간 >>" << how_long_trav[PID];
+    os << " || 자유여행 >>" << free_trav[PID];
+    os << " || 최소인원 >> " << minppl[PID];
+    os << " || 최대인원 >> " << maxppl[PID] << endl;
+}
+
+void addPackage::addRankReview()
+{
+QString pidtmp;
+pidtmp = QString::number(PID);
+QString rankfile = pidtmp+".rank.txt";
+QFile file(rankfile);
+file.open(QIODevice::WriteOnly);
+QTextStream rank(&file);
+rank << "0 0";
+QString reviewfile = pidtmp+".review.txt";
+QFile file2(reviewfile);
+file2.open(QIODevice::WriteOnly);
+QTextStream review(&file2);
+review << "리뷰목" <<endl;
+
+}
+

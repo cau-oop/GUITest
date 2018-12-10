@@ -3,8 +3,8 @@
 
 #include <QDialog>
 #include <QDebug>
-#include <iostream>
-#include <string>
+#include <QFileDialog>
+#include <QMessageBox>
 
 namespace Ui {
 class addPackage;
@@ -17,8 +17,20 @@ class addPackage : public QDialog
 public:
     explicit addPackage(QWidget *parent = nullptr);
     ~addPackage();
-    QString name, location, tag;
-    int price, via, date, time, free, howlong, min, max;
+        int PID=0;
+        QString Pname[100]; //패키지 이름
+        QString location[100]; //지역
+        QString tag[100]; //해시태그
+        int price[100];
+        int via[100];
+
+        int trav_start_date[100];
+        int trav_start_hour[100];
+
+        int how_long_trav[100];
+        int free_trav[100];
+        int minppl[100];
+        int maxppl[100];
 
 private slots:
     void on_pushButton_clicked();
@@ -49,8 +61,16 @@ private slots:
 
     void on_max_button_clicked();
 
+    void WriteFile();
+
+    void ReadFile();
+
+    void addRankReview();
+
 private:
     Ui::addPackage *ui;
+    QDir dir;
+    QFileInfoList list;
 };
 
 #endif // ADDPACKAGE_H

@@ -13,7 +13,553 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>패키지 검색</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="slocation" native="true">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>30</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QLineEdit" name="ansloc">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loc_button">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>확인</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="sminprice" native="true">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>100</y>
+     <width>371</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <widget class="QSlider" name="priceslider">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>3</number>
+    </property>
+    <property name="maximum">
+     <number>500</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksAbove</enum>
+    </property>
+    <property name="tickInterval">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pricelabel">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>54</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="smaxprice" native="true">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>180</y>
+     <width>371</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <widget class="QSlider" name="priceslider_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>3</number>
+    </property>
+    <property name="maximum">
+     <number>500</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksAbove</enum>
+    </property>
+    <property name="tickInterval">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pricelabel_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>54</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="trav_start_date" native="true">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>260</y>
+     <width>301</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>110</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>160</width>
+      <height>163</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="via" native="true">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>460</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QComboBox" name="via_combox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>72</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>2</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="free_trav" native="true">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>520</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QComboBox" name="trav_combo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>72</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>2</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="ppl" native="true">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>450</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QSpinBox" name="adultspin"/>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="childspin"/>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="under"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="adult">
+       <property name="text">
+        <string>성인</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="child">
+       <property name="text">
+        <string>소아(초,중)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="under6">
+       <property name="text">
+        <string>유아</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="searchbut">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>590</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>검색하기</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="tag" native="true">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>570</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>84</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QCheckBox" name="asklocation">
+      <property name="text">
+       <string>지역</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="askminp">
+      <property name="text">
+       <string>최소가격</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="askmaxp">
+      <property name="text">
+       <string>최대가격</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="askdate">
+      <property name="text">
+       <string>출발일</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="askvia">
+      <property name="text">
+       <string>경유</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="askfree">
+      <property name="text">
+       <string>자유일정</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="askppl">
+      <property name="text">
+       <string>여행인원</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="asktag">
+      <property name="text">
+       <string>키워드</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>asklocation</sender>
+   <signal>clicked()</signal>
+   <receiver>slocation</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>51</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loc_button</sender>
+   <signal>clicked()</signal>
+   <receiver>slocation</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>askminp</sender>
+   <signal>clicked()</signal>
+   <receiver>sminprice</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>226</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>askmaxp</sender>
+   <signal>clicked()</signal>
+   <receiver>smaxprice</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>226</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>askdate</sender>
+   <signal>clicked()</signal>
+   <receiver>trav_start_date</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>askvia</sender>
+   <signal>clicked()</signal>
+   <receiver>via</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>464</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>askfree</sender>
+   <signal>clicked()</signal>
+   <receiver>free_trav</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>521</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>askppl</sender>
+   <signal>clicked()</signal>
+   <receiver>ppl</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>458</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>asktag</sender>
+   <signal>clicked()</signal>
+   <receiver>tag</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>579</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
