@@ -96,7 +96,6 @@ void addPackage::ReadFile()
 {
     QFile file("packagelist.txt");
     file.open(QIODevice::ReadOnly);
-    QDataStream in(&file);
     QTextStream OpenFile(&file);
     QString ConfigText;
     QString search;

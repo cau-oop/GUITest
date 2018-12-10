@@ -30,21 +30,24 @@ SOURCES += \
     memberinfo.cpp \
     password.cpp \
     addpackage.cpp \
-    searchpackage.cpp
+    searchpackage.cpp \
+    searchresult.cpp
 
 HEADERS += \
         mainwindow.h \
     password.h \
     memberinfo.h \
     addpackage.h \
-    searchpackage.h
+    searchpackage.h \
+    searchresult.h
 
 FORMS += \
         mainwindow.ui \
     memberinfo.ui \
     password.ui \
     addpackage.ui \
-    searchpackage.ui
+    searchpackage.ui \
+    searchresult.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

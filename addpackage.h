@@ -69,8 +69,6 @@ private slots:
 
 private:
     Ui::addPackage *ui;
-    QDir dir;
-    QFileInfoList list;
 };
 
 #endif // ADDPACKAGE_H

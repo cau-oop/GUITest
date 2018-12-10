@@ -226,7 +226,7 @@
      <height>41</height>
     </rect>
    </property>
-   <widget class="QComboBox" name="trav_combo">
+   <widget class="QComboBox" name="trav_combox">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -335,7 +335,7 @@
      <height>41</height>
     </rect>
    </property>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="tagline">
     <property name="geometry">
      <rect>
       <x>20</x>
