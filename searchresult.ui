@@ -16,54 +16,56 @@
   <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>300</x>
      <y>20</y>
-     <width>80</width>
-     <height>20</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>검색 된 결과</string>
    </property>
   </widget>
-  <widget class="QScrollArea" name="scrollArea">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>160</y>
-     <width>431</width>
-     <height>291</height>
+     <x>20</x>
+     <y>120</y>
+     <width>601</width>
+     <height>431</height>
     </rect>
    </property>
-   <property name="verticalScrollBarPolicy">
-    <enum>Qt::ScrollBarAlwaysOn</enum>
+   <property name="currentIndex">
+    <number>0</number>
    </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="searchlabel">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>415</width>
-      <height>289</height>
-     </rect>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>10</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
+   <widget class="QWidget" name="prod1">
+    <attribute name="title">
+     <string>Prod1</string>
+    </attribute>
    </widget>
+   <widget class="QWidget" name="prod2">
+    <attribute name="title">
+     <string>Prod2</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="prod3">
+    <attribute name="title">
+     <string>Prod3</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="buy">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>560</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>구매</string>
+   </property>
   </widget>
  </widget>
  <resources/>

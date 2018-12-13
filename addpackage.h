@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QTextCodec>
 
 namespace Ui {
 class addPackage;
@@ -31,17 +32,14 @@ public:
         int free_trav[100];
         int minppl[100];
         int maxppl[100];
+        void ReadFile();
+        int clicked[12] = {0,};
 
 private slots:
-    void on_pushButton_clicked();
-
-    void on_comboBox_currentIndexChanged(int index);
 
     void on_name_button_clicked();
 
     void on_loc_button_clicked();
-
-    void on_loc_combo_currentIndexChanged(int index);
 
     void on_tag_button_2_clicked();
 
@@ -61,11 +59,7 @@ private slots:
 
     void on_max_button_clicked();
 
-    void WriteFile();
-
-    void ReadFile();
-
-    void addRankReview();
+    void on_finish_clicked();
 
 private:
     Ui::addPackage *ui;

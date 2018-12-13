@@ -9,6 +9,11 @@
 #include <fstream>
 #include <iostream>
 #include <iomanip>
+#include <vector>
+#include <QTextCodec>
+#include <QDebug>
+#include <QString>
+#include <QVector>
 using namespace std;
 
 namespace Ui {
@@ -25,20 +30,18 @@ public:
     QString comparedata[8];
     vector<string> v;
     int searchmin, searchmax, searchppl;
-    int findpackagecount = 0;
-    int buypacknumber = 0; //상품번호
-    int buynum; //입력받을 상품번호
     int condition[100] = { 0, };
+    static QString result[100];
+    QVector<QString> qv;
 
 private slots:
-    void on_horizontalSlider_valueChanged(int value);
 
-    void on_pushButton_clicked();
-
-    void on_priceslider_valueChanged(int value);
+     void on_priceslider_valueChanged(int value);
 
     void on_searchbut_clicked();
 
+
+    void on_priceslider_2_valueChanged(int value);
 
 private:
     Ui::searchpackage *ui;

@@ -31,7 +31,32 @@ SOURCES += \
     password.cpp \
     addpackage.cpp \
     searchpackage.cpp \
-    searchresult.cpp
+    searchresult.cpp \
+    login.cpp \
+    guestmain.cpp \
+    guestmypage.cpp \
+    passwordcheck.cpp \
+    newphone.cpp \
+    newspam.cpp \
+    packrank.cpp \
+    guiderank.cpp \
+    makenew.cpp \
+    saveinfo.cpp \
+    agencymain.cpp \
+    agencyinfo.cpp \
+    agencymember.cpp \
+    generalmember.cpp \
+    guidemember.cpp \
+    memberfail.cpp \
+    memberfail2.cpp \
+    guidemain.cpp \
+    guideinfo.cpp \
+    loginfail.cpp \
+    loginfail2.cpp \
+    chat.cpp \
+    pay.cpp \
+    adtopay.cpp \
+    packagereview.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,7 +64,33 @@ HEADERS += \
     memberinfo.h \
     addpackage.h \
     searchpackage.h \
-    searchresult.h
+    searchresult.h \
+    login.h \
+    guestmain.h \
+    guestmypage.h \
+    passwordcheck.h \
+    newphone.h \
+    newspam.h \
+    packrank.h \
+    guiderank.h \
+    makenew.h \
+    objectclassfile.h \
+    saveinfo.h \
+    agencymain.h \
+    agencyinfo.h \
+    agencymember.h \
+    generalmember.h \
+    guidemember.h \
+    memberfail.h \
+    memberfail2.h \
+    guidemain.h \
+    guideinfo.h \
+    loginfail.h \
+    loginfail2.h \
+    chat.h \
+    pay.h \
+    adtopay.h \
+    packagereview.h
 
 FORMS += \
         mainwindow.ui \
@@ -47,7 +98,33 @@ FORMS += \
     password.ui \
     addpackage.ui \
     searchpackage.ui \
-    searchresult.ui
+    searchresult.ui \
+    login.ui \
+    guestmain.ui \
+    guestmypage.ui \
+    passwordcheck.ui \
+    newphone.ui \
+    newspam.ui \
+    packrank.ui \
+    guiderank.ui \
+    makenew.ui \
+    saveinfo.ui \
+    searchpackage.ui \
+    agencymain.ui \
+    agencyinfo.ui \
+    agencymember.ui \
+    generalmember.ui \
+    guidemember.ui \
+    memberfail.ui \
+    memberfail2.ui \
+    guidemain.ui \
+    guideinfo.ui \
+    loginfail.ui \
+    loginfail2.ui \
+    chat.ui \
+    pay.ui \
+    adtopay.ui \
+    packagereview.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
