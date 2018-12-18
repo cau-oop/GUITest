@@ -1,6 +1,7 @@
 #include "searchpackage.h"
 #include "ui_searchpackage.h"
 #include "searchresult.h"
+#include "guestmain.h"
 
 QString searchpackage::result[100];
 searchpackage::searchpackage(QWidget *parent) :
@@ -77,9 +78,9 @@ if(ui->askminp->isChecked() || ui->askmaxp->isChecked())
     comparedata[1] =QString::fromUtf8( "가격 >> ");
     comparedata[2] =QString::fromUtf8( "가격 >> ");
     if(ui->askminp->isChecked())
-        searchmin = ui->pricelabel->text().toInt();
+        searchmin = ui->priceslider->value();
     if(ui->askmaxp->isChecked())
-        searchmax = ui->pricelabel_2->text().toInt();
+        searchmax = ui->priceslider_2->value();
     findmin = qv[i].contains(comparedata[1]);
     findmax = qv[i].contains(comparedata[2]);
 
@@ -132,10 +133,8 @@ if(ui->askdate->isChecked())
 {
     qDebug()<<QString("option4");
 
-    QString adate = (ui->dateEdit->date()).toString();
-    QStringList adate_tmp = adate.split("-");
-    QString adate2 = adate_tmp.join("");
-    comparedata[3] = QString::fromUtf8("출발일 >>") +adate2;
+    QString adate = (ui->dateEdit->date()).toString("yyyyMMdd");
+    comparedata[3] = QString::fromUtf8("출발일 >>") +adate;
     finddate = qv[i].contains(comparedata[3]);
 }
 if(ui->askvia->isChecked())
@@ -285,3 +284,11 @@ if ((findloc != false) && (findmin != false) && (findmax != false) && (finddate 
             sresult.exec();
 }
 
+
+void searchpackage::on_pushButton_2_clicked()
+{
+    close();
+    GuestMain gm;
+    gm.setModal(true);
+    gm.exec();
+}
