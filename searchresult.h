@@ -23,10 +23,12 @@ public:
     searchpackage spack;
     void fillArray();
     addPackage aP;
-    QLabel *label_array[15];
+    QLabel *label_array[100];
 
 private slots:
     void on_buy_clicked();
+
+    void on_back_b_clicked();
 
 private:
     Ui::searchresult *ui;
