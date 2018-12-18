@@ -1,5 +1,6 @@
 #include "searchresult.h"
 #include "ui_searchresult.h"
+#include "searchpackage.h"
 
 searchresult::searchresult(QWidget *parent) :
     QDialog(parent),
@@ -17,18 +18,27 @@ searchresult::searchresult(QWidget *parent) :
         cot++;
         }
     }
-    int k=0;
+    qDebug() << cot;
+    int l=0;
 
     int c=0;
+    int k=0;
 
-    for(int i=0; i<cot; i++)
+    for(int i=0; i<100; i++)
     {
-        searchresult::label_array[i] = new QLabel(QString::fromUtf8("상품 %1").arg(c+1));
-        label_array[i]->setText(spack.result[i]);
-        label_array[i]->setWordWrap(true);
-        ui->tabWidget->widget(i)->layout()->addWidget(searchresult::label_array[i]);
-        c++;
 
+
+        if(!spack.result[i].isNull())
+        {
+          searchresult::label_array[k] = new QLabel(QString::fromUtf8("상품 %1").arg(c+1));
+          label_array[k]->setText(spack.result[i]);
+          label_array[k]->setWordWrap(true);
+        ui->tabWidget->widget(l)->layout()->addWidget(searchresult::label_array[k]);
+        l++;
+        k++;
+        }
+
+        c++;
    }
 
 }
@@ -41,4 +51,12 @@ searchresult::~searchresult()
 void searchresult::on_buy_clicked()
 {
 
+}
+
+void searchresult::on_back_b_clicked()
+{
+    close();
+    searchpackage sp;
+    sp.setModal(true);
+    sp.exec();
 }
